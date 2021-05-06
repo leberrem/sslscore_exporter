@@ -15,9 +15,9 @@ version: "2.1"
 
 services:
 
-  ssllabs_exporter:
-    image: registre.mgcloud.fr/mgdis/ssllabs-exporter:1.0
-    container_name: ssllabs_exporter
+  sslscore_exporter:
+    image: registre.mgcloud.fr/mgdis/sslscore-exporter:1.0
+    container_name: sslscore_exporter
     ports:
       - "9299:9299"
     environment:
