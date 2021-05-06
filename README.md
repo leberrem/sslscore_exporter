@@ -1,6 +1,6 @@
 # sslscore-exporter
 
-Docker image to export metrics from sslscore API to prometheus
+Docker image to export metrics from SSL Labs & HTTP Discovery API to prometheus
 
 **Parameters**
 
