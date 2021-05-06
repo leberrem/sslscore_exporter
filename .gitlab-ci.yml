@@ -1,0 +1,22 @@
+image: docker:latest
+
+services:
+  - docker:dind
+
+build:
+  stage: build
+  except:
+    - master
+  script:
+    - docker info
+    - docker build -t leberrem/sslscore_exporter .
+
+build-master:
+  stage: build
+  only:
+    - master
+  script:
+    - docker info
+    - docker build -t leberrem/sslscore_exporter .
+    - echo "$REGISTRY_PASSWORD" | docker login -u "$REGISTRY_USER" --password-stdin
+    - docker push leberrem/sslscore_exporter
