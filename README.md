@@ -23,3 +23,7 @@ services:
     environment:
       - HOST=github.com
 ```
+
+**dashboard grafana sample**
+
+![dashboard](dashboard.png)
