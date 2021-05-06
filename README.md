@@ -8,6 +8,10 @@ Docker image to export metrics from sslscore API to prometheus
 - interval : interval between collect in seconds (default: 60)
 - HOST : host key
 
+**Docker hub**
+
+https://hub.docker.com/repository/docker/leberrem/sslscore_exporter/
+
 **docker compose sample**
 
 ```yml
