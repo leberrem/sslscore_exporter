@@ -97,8 +97,8 @@ def main():
 # http port - default 9299
 port = int(os.getenv('PORT', 9299))
 
-# Refresh interval between collects in seconds - default 300
-interval = int(os.getenv('INTERVAL', 300))
+# Refresh interval between collects in seconds - default 1800 (30 minutes)
+interval = int(os.getenv('INTERVAL', 1800))
 
 host = os.getenv('HOST', None)
 

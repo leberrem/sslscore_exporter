@@ -372,10 +372,10 @@ def call(host):
             api_url=None)
         info = assessment.analyze(
             ignore_mismatch='off',
-            from_cache='on',
-            max_age=5,
+            from_cache='off',
+            max_age=1,
             return_all='done',
-            publish='on',
+            publish='off',
             resume=False,
             detail=False)
         if not info:
