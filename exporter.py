@@ -51,6 +51,7 @@ def getHttpObs():
     score=httpobscli_return["score"]
 
     sys.stdout.write(host+" => "+grade+"\n")
+    GaugeHttpObs._metrics.clear()
     GaugeHttpObs.labels(host, grade).set(score)
 
   except Exception as e:
@@ -71,6 +72,7 @@ def getSslLabs():
     score=gradeToScore(grade)
 
     sys.stdout.write(host+" - "+str(ssllabs_return["endpoints"][0]["ipAddress"])+" => "+str(ssllabs_return["endpoints"][0]["grade"])+"\n")
+    GaugeSslLabs._metrics.clear()
     GaugeSslLabs.labels(host, grade).set(score)
 
   except Exception as e:
